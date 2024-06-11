@@ -99,7 +99,9 @@ $button.addEventListener("dblclick", (e) => {
 
 // mouseover event (causes effect on the children elements)
 const $container1 = document.querySelector(".container-1"),
-	$container2 = document.querySelector(".container-2");
+	$container2 = document.querySelector(".container-2"),
+	$myInput = document.querySelector(".my-input"),
+	$myImage = document.querySelector(".my-image");
 
 // $container1.addEventListener("mouseover", () => {
 // 	alert("Mouseover!");
@@ -122,6 +124,72 @@ const $container1 = document.querySelector(".container-1"),
 // });
 
 // mouseup event
-$container1.addEventListener("mouseup", (e) => {
-	alert("Mouseup!");
+// $container1.addEventListener("mouseup", (e) => {
+// 	alert("Mouseup!");
+// });
+
+// keydown event
+// $myInput.addEventListener("keydown", (e) => {
+// 	console.log("This is a Keydown!");
+// });
+
+// keypress event
+// $myInput.addEventListener("keypress", (e) => {
+// 	console.log("This is a Keypress!");
+// });
+
+// keyup event
+// $myInput.addEventListener("keyup", (e) => {
+// 	console.log("This is a Keydup!");
+// });
+
+// ********************************************************************
+// Interfaz events ****************************************************
+
+// error event (When an error occurs during the loading process of an multimedia file: img or video)
+// $myImage.addEventListener("error", (e) => {
+// 	alert("An error has occurred!");
+// });
+
+// load event
+window.addEventListener("load", () => {
+	console.log("The site has loaded!");
+});
+
+// beforeunload event (Before you are going to leave the site)
+window.addEventListener("beforeunload", () => {
+	console.log("You are going to leave this site!");
+});
+
+// unload event (When you are going to leave the site)
+window.addEventListener("unload", () => {
+	console.log("You are going to leave this site!");
+});
+
+// resize event
+// window.addEventListener("resize", () => {
+// 	alert("The screen has been resized!");
+// });
+
+// scroll event
+window.addEventListener("scroll", () => {
+	console.log("A scroll event has ocurred!");
+});
+
+// select event (for inputs and textareas)
+let $selectedText = document.querySelector(".selected-text");
+
+$myInput.addEventListener("select", (e) => {
+	console.log(
+		`The selection starts at the caracter position number: ${e.target.selectionStart}`
+	);
+	console.log(
+		`The selection ends at the caracter position number: ${e.target.selectionEnd}`
+	);
+
+	let start = e.target.selectionStart;
+	let end = e.target.selectionEnd;
+	let inputText = $myInput.value;
+
+	$selectedText.innerHTML = inputText.substring(start, end);
 });

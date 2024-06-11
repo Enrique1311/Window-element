@@ -12,3 +12,10 @@
 p {
 	color: rgb(168, 167, 167);
 }
+
+.my-input {
+	border: 2px blue solid;
+	border-radius: 5px;
+	padding: 5px;
+	outline: none;
+}
