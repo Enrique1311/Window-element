@@ -1,0 +1,14 @@
+.container-1 {
+	background-color: blue;
+	padding: 2rem;
+	color: white;
+}
+
+.container-2 {
+	background-color: black;
+	padding: 2rem;
+}
+
+p {
+	color: rgb(168, 167, 167);
+}
