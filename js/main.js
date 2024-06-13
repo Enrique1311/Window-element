@@ -193,3 +193,19 @@ $myInput.addEventListener("select", (e) => {
 
 	$selectedText.innerHTML = inputText.substring(start, end);
 });
+
+// setTimeout
+const timer = setTimeout(() => {
+	document.write("Hello!");
+}, 2000);
+
+// clearTimeout
+clearTimeout(timer);
+
+// setInterval
+const interval = setInterval(() => {
+	document.write("Hello!");
+}, 1000);
+
+// clearInterval
+clearInterval(interval);
