@@ -10,3 +10,19 @@
 	border: 1px solid #0000ff;
 	margin: 5px;
 }
+
+button {
+	background-color: #0000ff;
+	color: white;
+	font-weight: bold;
+	border-radius: 5px;
+	margin-top: 2rem;
+	padding: 0.5rem 1rem;
+	border: 2px solid #0000ff;
+	transition: color 0.3s, background-color 0.3s;
+}
+
+button:hover {
+	background-color: white;
+	color: #0000ff;
+}
